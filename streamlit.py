@@ -26,7 +26,7 @@ st.markdown('''
 st.sidebar.subheader("施策詳細")
 
 # サイドバーでの評価指標入力
-evaluation_metrix = st.sidebar.text_area("評価指標（CVRになる指標を想定しています。）", placeholder="入力できます")
+# evaluation_metrix = st.sidebar.text_area("評価指標（CVRになる指標を想定しています。）", placeholder="入力できます")
 
 # 2つのカラムを作成
 col1, col2 = st.sidebar.columns(2)
@@ -40,7 +40,7 @@ with col2:
     end_date = st.date_input("テスト終了日", value=datetime.today())
 
 # サイドバーでの評価指標入力
-url_link = st.sidebar.text_area("関連URL（必要であれば）", placeholder="URLを記載してください")
+# url_link = st.sidebar.text_area("関連URL（必要であれば）", placeholder="URLを記載してください")
 
 st.sidebar.markdown("-----------------")  # ここで横線を追加
 
@@ -73,27 +73,27 @@ st.markdown('A/Bテスト結果の訪問者数とCV数を入力することで�
 
 
    ## 施策内容 ##
-st.markdown("<h4>■施策について</h4>", unsafe_allow_html=True)
-policy_content = st.text_area("〇施策内容", placeholder="入力できます")
+# st.markdown("<h4>■施策について</h4>", unsafe_allow_html=True)
+# policy_content = st.text_area("〇施策内容", placeholder="入力できます")
 
-st.write("〇評価指標")
-st.markdown(f'<span style="font-weight: bold;"><u>{evaluation_metrix}</u></span>', unsafe_allow_html=True)
+# st.write("〇評価指標")
+# st.markdown(f'<span style="font-weight: bold;"><u>{evaluation_metrix}</u></span>', unsafe_allow_html=True)
 
 
 ##テスト日数##
-st.write("〇テスト期間")
+st.markdown("<h4>■テスト期間</h4>", unsafe_allow_html=True)
 if end_date >= start_date:
     days_difference = (end_date - start_date).days
     st.markdown(f'<span style="font-weight: bold;"><u>{start_date} ➡ {end_date}（{days_difference} days）</u></span>', unsafe_allow_html=True)
 else:
     st.markdown('<span style="font-weight: bold;"><u>終了日は開始日より後の日付を選択してください。</u></span>', unsafe_allow_html=True)
 
-st.write("〇施策関連URL（必要であれば）")
-st.markdown(f'<span style="font-weight: bold;"><u>{url_link}</u></span>', unsafe_allow_html=True)
+# st.write("〇施策関連URL（必要であれば）")
+# st.markdown(f'<span style="font-weight: bold;"><u>{url_link}</u></span>', unsafe_allow_html=True)
 
 
 
-st.markdown("-----------------")  # ここで横線を追加
+# st.markdown("-----------------")  # ここで横線を追加
 
 
 ##通常ABテストセクション##
