@@ -51,14 +51,14 @@ with col3:
     try:
         visitors_a = int(visitors_a_input)
     except ValueError:
-        st.warning("整数を入力")
+        # st.warning("整数を入力")
         visitors_a = 0
 with col4:
     conversion_a_input = st.text_input('AのCV数', value="")
     try:
         conversion_a = int(conversion_a_input)
     except ValueError:
-        st.warning("整数を入力")
+        # st.warning("整数を入力")
         conversion_a = 0
 cvr_a = conversion_a / visitors_a if visitors_a > 0 else 0
 st.sidebar.markdown(f'AのCVR :  **{"{:.1%}".format(cvr_a)}**')
@@ -69,14 +69,14 @@ with col5:
     try:
         visitors_b = int(visitors_b_input)
     except ValueError:
-        st.warning("整数を入力")
+        # st.warning("整数を入力")
         visitors_b = 0
 with col6:
     conversion_b_input = st.text_input('BのCV数', value="")
     try:
         conversion_b = int(conversion_b_input)
     except ValueError:
-        st.warning("整数を入力")
+        # st.warning("整数を入力")
         conversion_b = 0
 cvr_b = conversion_b / visitors_b if visitors_b > 0 else 0
 st.sidebar.markdown(f'BのCVR :  **{"{:.1%}".format(cvr_b)}**')
