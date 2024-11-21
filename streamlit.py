@@ -47,18 +47,38 @@ st.sidebar.markdown("-----------------")  # ここで横線を追加
 st.sidebar.subheader('取得データ')
 col3, col4 = st.sidebar.columns(2)
 with col3:
-    visitors_a = st.number_input('Aの訪問者数', value=1000)
+    visitors_a_input = st.text_input('Aの訪問者数', value="1000")
+    try:
+        visitors_a = int(visitors_a_input)
+    except ValueError:
+        st.warning("Aの訪問者数に整数を入力してください。")
+        visitors_a = 0
 with col4:
-    conversion_a = st.number_input('AのCV数', value=500)
-cvr_a = conversion_a / visitors_a
+    conversion_a_input = st.text_input('AのCV数', value="500")
+    try:
+        conversion_a = int(conversion_a_input)
+    except ValueError:
+        st.warning("AのCV数に整数を入力してください。")
+        conversion_a = 0
+cvr_a = conversion_a / visitors_a if visitors_a > 0 else 0
 st.sidebar.markdown(f'AのCVR :  **{"{:.1%}".format(cvr_a)}**')
 
 col5, col6 = st.sidebar.columns(2)
 with col5:
-    visitors_b = st.number_input('Bの訪問者数', value=1000)
+    visitors_b_input = st.text_input('Bの訪問者数', value="1000")
+    try:
+        visitors_b = int(visitors_b_input)
+    except ValueError:
+        st.warning("Bの訪問者数に整数を入力してください。")
+        visitors_b = 0
 with col6:
-    conversion_b = st.number_input('BのCV数', value=500)
-cvr_b = conversion_b / visitors_b
+    conversion_b_input = st.text_input('BのCV数', value="500")
+    try:
+        conversion_b = int(conversion_b_input)
+    except ValueError:
+        st.warning("BのCV数に整数を入力してください。")
+        conversion_b = 0
+cvr_b = conversion_b / visitors_b if visitors_b > 0 else 0
 st.sidebar.markdown(f'BのCVR :  **{"{:.1%}".format(cvr_b)}**')
 
 
