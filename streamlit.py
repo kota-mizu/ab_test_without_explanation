@@ -47,14 +47,14 @@ st.sidebar.markdown("-----------------")  # ここで横線を追加
 st.sidebar.subheader('取得データ')
 col3, col4 = st.sidebar.columns(2)
 with col3:
-    visitors_a_input = st.text_input('Aの訪問者数', value="")
+    visitors_a_input = st.text_input('Aの訪問者数', placeholder="数字を入力")
     try:
         visitors_a = int(visitors_a_input)
     except ValueError:
         # st.warning("整数を入力")
         visitors_a = 0
 with col4:
-    conversion_a_input = st.text_input('AのCV数', value="")
+    conversion_a_input = st.text_input('AのCV数', placeholder="数字を入力")
     try:
         conversion_a = int(conversion_a_input)
     except ValueError:
@@ -65,14 +65,14 @@ st.sidebar.markdown(f'AのCVR :  **{"{:.1%}".format(cvr_a)}**')
 
 col5, col6 = st.sidebar.columns(2)
 with col5:
-    visitors_b_input = st.text_input('Bの訪問者数', value="")
+    visitors_b_input = st.text_input('Bの訪問者数', placeholder="数字を入力")
     try:
         visitors_b = int(visitors_b_input)
     except ValueError:
         # st.warning("整数を入力")
         visitors_b = 0
 with col6:
-    conversion_b_input = st.text_input('BのCV数', value="")
+    conversion_b_input = st.text_input('BのCV数', placeholder="数字を入力")
     try:
         conversion_b = int(conversion_b_input)
     except ValueError:
