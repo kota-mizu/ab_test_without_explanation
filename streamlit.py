@@ -23,7 +23,7 @@ st.markdown('''
 ''', unsafe_allow_html=True)
 
 # サイドバーでの日付選択
-st.sidebar.subheader("施策詳細")
+st.sidebar.subheader("テスト期間")
 
 # サイドバーでの評価指標入力
 # evaluation_metrix = st.sidebar.text_area("評価指標（CVRになる指標を想定しています。）", placeholder="入力できます")
