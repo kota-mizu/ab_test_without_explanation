@@ -44,7 +44,7 @@ with col2:
 
 st.sidebar.markdown("-----------------")  # ここで横線を追加
 
-st.sidebar.subheader('取得データを入力して下さい。')
+st.sidebar.subheader('取得データ')
 col3, col4 = st.sidebar.columns(2)
 with col3:
     visitors_a = st.number_input('Aの訪問者数', value=1000)
@@ -84,9 +84,9 @@ st.markdown('A/Bテスト結果の訪問者数とCV数を入力することで�
 st.markdown("<h4>■テスト期間</h4>", unsafe_allow_html=True)
 if end_date >= start_date:
     days_difference = (end_date - start_date).days
-    st.markdown(f'<span style="font-weight: bold;"><u>{start_date} ➡ {end_date}（{days_difference} days）</u></span>', unsafe_allow_html=True)
+    st.markdown(f'<span style="font-weight: bold; padding-bottom = 15px">{start_date} ➡ {end_date}（{days_difference} days）</span>', unsafe_allow_html=True)
 else:
-    st.markdown('<span style="font-weight: bold;"><u>終了日は開始日より後の日付を選択してください。</u></span>', unsafe_allow_html=True)
+    st.markdown('<span style="font-weight: bold;">終了日は開始日より後の日付を選択してください。</span>', unsafe_allow_html=True)
 
 # st.write("〇施策関連URL（必要であれば）")
 # st.markdown(f'<span style="font-weight: bold;"><u>{url_link}</u></span>', unsafe_allow_html=True)
