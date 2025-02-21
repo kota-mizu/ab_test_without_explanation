@@ -22,6 +22,8 @@ st.markdown('''
     </style>
 ''', unsafe_allow_html=True)
 
+
+
 # サイドバーでの日付選択
 st.sidebar.subheader("テスト期間")
 
@@ -45,6 +47,10 @@ with col2:
 st.sidebar.markdown("-----------------")  # ここで横線を追加
 
 st.sidebar.subheader('取得データ')
+
+# サイドバーでの日付選択
+st.sidebar.markdown("データを入力したらUIが動作します。")
+
 col3, col4 = st.sidebar.columns(2)
 with col3:
     visitors_a_input = st.text_input('Aの訪問者数', placeholder="数字を入力")
