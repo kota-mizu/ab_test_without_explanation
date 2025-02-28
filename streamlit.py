@@ -135,7 +135,7 @@ st.markdown(rf'''
         table-layout: fixed;
     }}
     th, td {{
-        padding: 10px;
+        padding: 5px;
         text-align: center;
         border: 1px solid black;
         font-size: 18px;
