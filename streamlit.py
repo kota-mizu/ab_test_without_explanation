@@ -154,7 +154,6 @@ st.markdown(rf'''
     th:nth-child(5), th:nth-child(6), th:nth-child(7) {{
         width: 13%;
         font-size: 14px
-        text-align: center;
     }}
     td:nth-child(5), td:nth-child(6), td:nth-child(7) {{
         width: 13%;
