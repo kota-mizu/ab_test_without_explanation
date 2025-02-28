@@ -142,6 +142,7 @@ st.markdown(rf'''
     }}
     th:nth-child(1), td:nth-child(1) {{
         width: 15%;
+        text-align: center;
     }}
     th:nth-child(2), td:nth-child(2),
     th:nth-child(3), td:nth-child(3),
