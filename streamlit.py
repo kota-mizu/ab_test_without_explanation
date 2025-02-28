@@ -148,13 +148,17 @@ st.markdown(rf'''
     th:nth-child(3), td:nth-child(3),
     th:nth-child(4), td:nth-child(4) {{
         width: 15%;
+        text-align: center;
+
     }}
     th:nth-child(5), th:nth-child(6), th:nth-child(7) {{
         width: 13%;
         font-size: 14px
+        text-align: center;
     }}
     td:nth-child(5), td:nth-child(6), td:nth-child(7) {{
         width: 13%;
+        text-align: center;
     }}
     </style>
 
